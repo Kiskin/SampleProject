@@ -14,7 +14,7 @@ import org.slf4j.LoggerFactory;
 /**
  * OSGI R6 Annotation Scheduler Example
  * 
- * @author aahlawat
+ *
  *
  */
 @Component(immediate = true, service = OSGIR6SchedulerExample.class)
