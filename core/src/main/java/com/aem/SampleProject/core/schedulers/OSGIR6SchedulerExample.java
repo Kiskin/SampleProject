@@ -19,51 +19,57 @@ import org.slf4j.LoggerFactory;
  */
 @Component(immediate = true, service = OSGIR6SchedulerExample.class)
 @Designate(ocd = OSGIR6SchedulerExampleConfiguration.class)
-public class OSGIR6SchedulerExample implements Runnable{
-	
+public class OSGIR6SchedulerExample implements Runnable {
+
 	@Reference
-	 private Scheduler scheduler;
+	private Scheduler scheduler;
 	private int schedulerID;
 	private final Logger logger = LoggerFactory.getLogger(this.getClass());
+
 	@Activate
-	 protected void activate(OSGIR6SchedulerExampleConfiguration config) {
-	  schedulerID = config.schedulerName().hashCode();
-	 }
+	protected void activate(OSGIR6SchedulerExampleConfiguration config) {
+		schedulerID = config.schedulerName().hashCode();
+	}
+
 	@Modified
-	 protected void modified(OSGIR6SchedulerExampleConfiguration config) {
-	  removeScheduler();
-	  schedulerID = config.schedulerName().hashCode(); // update schedulerID
-	  addScheduler(config);
-	 }
+	protected void modified(OSGIR6SchedulerExampleConfiguration config) {
+		removeScheduler();
+		schedulerID = config.schedulerName().hashCode(); // update schedulerID
+		addScheduler(config);
+	}
+
 	@Deactivate
-	 protected void deactivate(OSGIR6SchedulerExampleConfiguration config) {
-	  removeScheduler();
-	 }
+	protected void deactivate(OSGIR6SchedulerExampleConfiguration config) {
+		removeScheduler();
+	}
+
 	/**
-	  * Remove a scheduler based on the scheduler ID
-	  */
-	 private void removeScheduler() {
-	  logger.debug("Removing Scheduler Job '{}'", schedulerID);
-	  scheduler.unschedule(String.valueOf(schedulerID));
-	 }
+	 * Remove a scheduler based on the scheduler ID
+	 */
+	private void removeScheduler() {
+		logger.debug("Removing Scheduler Job '{}'", schedulerID);
+		scheduler.unschedule(String.valueOf(schedulerID));
+	}
+
 	/**
-	  * Add a scheduler based on the scheduler ID
-	  */
-	 private void addScheduler(OSGIR6SchedulerExampleConfiguration config) {
-	  if (config.serviceEnabled()) {
-	   ScheduleOptions sopts = scheduler.EXPR(config.schedulerExpression());
-	   sopts.name(String.valueOf(schedulerID));
-	   sopts.canRunConcurrently(false);
-	   scheduler.schedule(this, sopts);
-	   logger.debug("Scheduler added succesfully");
-	  } else {
-	   logger.debug("OSGIR6SchedulerExample is Disabled, no scheduler job created");
-	  }
-	 }
+	 * Add a scheduler based on the scheduler ID
+	 */
+	private void addScheduler(OSGIR6SchedulerExampleConfiguration config) {
+		if (config.serviceEnabled()) {
+			ScheduleOptions sopts = scheduler.EXPR(config.schedulerExpression());
+			sopts.name(String.valueOf(schedulerID));
+			sopts.canRunConcurrently(false);
+			scheduler.schedule(this, sopts);
+			logger.debug("Scheduler added succesfully");
+		} else {
+			logger.debug("OSGIR6SchedulerExample is Disabled, no scheduler job created");
+		}
+	}
+
 	@Override
-	 public void run() {
-	  logger.debug("Inside OSGIR6SchedulerExample run Method");
-	  logger.info("Inside OSGIR6SchedulerExample run Method - info");
-	 }
+	public void run() {
+		logger.debug("Inside OSGIR6SchedulerExample run Method");
+		logger.info("Inside OSGIR6SchedulerExample run Method - info");
+	}
 
 }
