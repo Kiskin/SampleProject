@@ -34,5 +34,9 @@ public @interface OSGIR6SchedulerExampleConfiguration {
 	 */
 	 @AttributeDefinition(name = "Expression", description = "Cron-job expression. Default: run every hour.", type = AttributeType.STRING)
 	 String schedulerExpression() default "0 0 0/1 1/1 * ? *";
+	 
+	 @AttributeDefinition(name = "Author", description = "Author description.", type = AttributeType.STRING)
+	 String authorDescription() default "Giles K.K";
+
 
 }

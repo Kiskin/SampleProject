@@ -51,42 +51,46 @@ import org.w3c.dom.Element;
 import com.aem.SampleProject.core.models.Model;
 
 import java.io.StringWriter;
-import java.util.Iterator;
-import java.util.List;
-import java.util.ArrayList;
-    
-import javax.jcr.Repository; 
-import javax.jcr.SimpleCredentials; 
-import javax.jcr.Node; 
+//import java.util.Iterator;
+//import java.util.List;
+//import java.util.ArrayList;
+//    
+//import javax.jcr.Repository; 
+//import javax.jcr.SimpleCredentials; 
+//import javax.jcr.Node; 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
-import java.util.HashMap; 
-import java.util.Map; 
-     
-import org.apache.jackrabbit.commons.JcrUtils;
+//import java.util.HashMap; 
+//import java.util.Map; 
+//     
+//import org.apache.jackrabbit.commons.JcrUtils;
     
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
     
-//import org.apache.felix.scr.annotations.Component;
-//import org.apache.felix.scr.annotations.Service;
-import javax.jcr.RepositoryException;
-//import org.apache.felix.scr.annotations.Reference;
-import org.apache.jackrabbit.commons.JcrUtils;
-    
-import javax.jcr.Session;
-import javax.jcr.Node; 
-   
-   
-//Sling Imports
-import org.apache.sling.api.resource.ResourceResolverFactory;
-import org.apache.sling.api.resource.ResourceResolver; 
-import org.apache.sling.api.resource.Resource; 
+////import org.apache.felix.scr.annotations.Component;
+////import org.apache.felix.scr.annotations.Service;
+//import javax.jcr.RepositoryException;
+////import org.apache.felix.scr.annotations.Reference;
+//import org.apache.jackrabbit.commons.JcrUtils;
+//    
+//import javax.jcr.Session;
+//import javax.jcr.Node; 
+//   
+//   
+////Sling Imports
+//import org.apache.sling.api.resource.ResourceResolverFactory;
+//import org.apache.sling.api.resource.ResourceResolver; 
+//import org.apache.sling.api.resource.Resource; 
     
 
-@Component(immediate = true, service = EventListener.class)
+@Component(immediate = true, service = EventListener.class,
+property = {
+        "sling.servlet.resourceTypes=project/components/component"
+    })
+
 
 public class SimpleResourceListener implements EventListener {
 	final Map<String, Object> param = new HashMap<String, Object>();
@@ -102,7 +106,8 @@ public class SimpleResourceListener implements EventListener {
 	ResourceResolverFactory resolverFactory;
 
 	@Activate
-	public String activate(ComponentContext context) throws Exception {
+	public void activate(ComponentContext context) throws Exception {
+		
 		log.info("Trying to activate ExampleObservation");
 		param.put(ResourceResolverFactory.SUBSERVICE, "datawrite");
 		ResourceResolver resolver = null;
@@ -150,12 +155,12 @@ public class SimpleResourceListener implements EventListener {
 			 //cust.setCustDescription(node.getProperty("desc").getString());
 			             
 			  //Push Customer to the list
-			  //custList.add(cust);
+			  custList.add(cust);
 			  }
 			           
 			// Log out
 			 adminSession.logout();    
-			return convertToString(toXml(custList));      
+			//return convertToString(toXml(custList));      
 
 		} catch (RepositoryException e) {
 			log.error("unable to register session", e);

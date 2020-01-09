@@ -27,10 +27,13 @@ import junitx.util.PrivateAccessor;
 import org.apache.sling.settings.SlingSettingsService;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.junit.MockitoJUnitRunner;
 
 /**
  * Simple JUnit test verifying the HelloWorldModel
  */
+@RunWith(MockitoJUnitRunner.class)
 public class HelloWorldModelTest {
 
     //@Inject
