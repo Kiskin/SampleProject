@@ -30,5 +30,9 @@ public class Model {
 	public void setPath(String path) {
 		this.path = path;
 	}
+	
+	public String toString() {
+		return "Model string";
+	}
 
 }
