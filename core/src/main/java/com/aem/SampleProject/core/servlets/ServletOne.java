@@ -38,8 +38,9 @@ import java.io.IOException;
 @Component(service=Servlet.class,
 property= {Constants.SERVICE_DESCRIPTION +" =Simple sling servlet",
 		"sling.servlet.methods=" + HttpConstants.METHOD_GET,
-		"sling.resourceTypes=" +"trainingproject/components/structure/page",
-		"sling.servlet.paths="+ "/bin/custom"})
+		"sling.servlet.resourceTypes="+"weretail/components/structure/page",
+		"sling.servlet.selectors="+"servlet1"
+	})
 public class ServletOne extends SlingSafeMethodsServlet{
 	
 	private static final long serialVersionUID = 1L;

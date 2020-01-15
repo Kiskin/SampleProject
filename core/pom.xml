@@ -21,9 +21,9 @@
 	<packaging>bundle</packaging>
 	<name>SampleProject - Core</name>
 	<description>Core bundle for SampleProject</description>
-	
+
 	<build>
-		
+
 		<plugins>
 			<plugin>
 				<groupId>org.apache.sling</groupId>
@@ -45,14 +45,14 @@
 				</configuration>
 			</plugin>
 			<plugin>
-          		<groupId>org.apache.maven.plugins</groupId>
-          		<artifactId>maven-surefire-plugin</artifactId>
-          		</plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+			</plugin>
 
 
 
 		</plugins>
-	
+
 	</build>
 
 	<dependencies>
@@ -170,8 +170,31 @@
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-email</artifactId>
-			<version>1.1</version>
+			<version>1.2</version>
 		</dependency>
+
+		<!-- https://mvnrepositoray.com/artifact/javax.mail/javax.mail-api -->
+		<dependency>
+			<groupId>javax.mail</groupId>
+			<artifactId>javax.mail-api</artifactId>
+			<version>1.6.0</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.5</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.apache.felix/org.apache.felix.scr.annotations -->
+		<dependency>
+    		<groupId>org.apache.felix</groupId>
+    		<artifactId>org.apache.felix.scr.annotations</artifactId>
+    		<version>1.11.0</version>
+		</dependency>
+
+
 
 
 
