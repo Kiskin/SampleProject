@@ -1,0 +1,422 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf600
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\froman\fcharset0 Times-Roman;\f2\fnil\fcharset0 Menlo-Regular;
+\f3\fnil\fcharset0 Monaco;\f4\fswiss\fcharset0 Helvetica-Light;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue233;\red203\green35\blue57;\red27\green31\blue34;
+\red255\green255\blue255;\red38\green38\blue38;\red21\green23\blue26;\red7\green68\blue184;\red6\green33\blue79;
+\red251\green2\blue7;\red0\green0\blue0;\red10\green82\blue135;\red98\green98\blue98;\red109\green109\blue109;
+\red0\green0\blue255;\red251\green0\blue129;\red18\green139\blue2;\red52\green52\blue52;\red159\green159\blue159;
+\red30\green105\blue192;\red27\green73\blue137;\red0\green0\blue0;\red242\green242\blue242;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c93333;\cssrgb\c84314\c22745\c28627;\cssrgb\c14118\c16078\c18039;
+\cssrgb\c100000\c100000\c100000;\cssrgb\c20000\c20000\c20000;\cssrgb\c10588\c12157\c13725\c29804;\cssrgb\c0\c36078\c77255;\cssrgb\c1176\c18431\c38431;
+\cssrgb\c100000\c14913\c0;\cssrgb\c0\c0\c0;\cssrgb\c0\c40000\c60000;\cssrgb\c45882\c45882\c45882;\cssrgb\c50196\c50196\c50196;
+\cssrgb\c0\c0\c100000;\cssrgb\c100000\c7843\c57647;\cssrgb\c0\c60000\c0;\cssrgb\c26667\c26667\c26667;\cssrgb\c68627\c68627\c68627;
+\cssrgb\c14118\c49804\c80000;\cssrgb\c13333\c36863\c60784;\cssrgb\c0\c0\c0\c70196;\cssrgb\c96078\c96078\c96078;}
+\margl1440\margr1440\vieww50700\viewh28000\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Services and annotations.\
+\
+// Reference link:\
+\
+\pard\pardeftab720\sl280\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://github.com/varunmitra/aem-enablement"}}{\fldrslt 
+\f1\fs36 \cf2 \expnd0\expndtw0\kerning0
+\ul \ulc2 \outl0\strokewidth0 \strokec2 https://github.com/varunmitra/aem-enablement}}
+\f1 \cf2 \expnd0\expndtw0\kerning0
+\ul \ulc2 \outl0\strokewidth0 \strokec2 \
+\
+\
+
+\f0 \cf0 \kerning1\expnd0\expndtw0 \ulnone \outl0\strokewidth0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+There are two (at least) ways of using annotations in AEM:\
+\
+SCR annotations and  OSGI Declarative Services\
+\
+SCR Annotations.\
+\
+As of AEM 6.2 these are being deprecated.\
+\
+Usage: @service annotation above a service class declaration.\
+\
+Example\
+\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth2023\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt80 \clpadl200 \clpadb20 \clpadr200 \gaph\cellx4320
+\clmrg \clvertalt \clshdrawnil \clwWidth2023\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt80 \clpadl200 \clpadb20 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl400\partightenfactor0
+
+\f2 \cf3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec3 @SlingServlet\cf4 \strokec4 (\cell 
+\pard\intbl\itap1\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth2023\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl200 \clpadb20 \clpadr200 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth8814\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl200 \clpadb20 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl400\qr\partightenfactor0
+\cf7 \strokec7 \cell 
+\pard\intbl\itap1\pardeftab720\sl400\partightenfactor0
+\cf4 \strokec4   \cf8 \strokec8 resourceTypes\cf3 \strokec3 =\cf9 \strokec9 "my-aem-project/components/page/page"\cf4 \strokec4 , \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth2023\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl200 \clpadb20 \clpadr200 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth8814\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl200 \clpadb20 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl400\qr\partightenfactor0
+\cf7 \strokec7 \cell 
+\pard\intbl\itap1\pardeftab720\sl400\partightenfactor0
+\cf4 \strokec4   \cf8 \strokec8 selectors\cf3 \strokec3 =\cf9 \strokec9 "training"\cf4 \strokec4 ,\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth2023\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl200 \clpadb20 \clpadr200 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth8814\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl200 \clpadb20 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl400\qr\partightenfactor0
+\cf7 \strokec7 \cell 
+\pard\intbl\itap1\pardeftab720\sl400\partightenfactor0
+\cf4 \strokec4   \cf8 \strokec8 paths\cf3 \strokec3 =\cf9 \strokec9 "/bin/trainingservlet"\cf4 \strokec4 ,\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth2023\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl200 \clpadb20 \clpadr200 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth8814\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl200 \clpadb20 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl400\qr\partightenfactor0
+\cf7 \strokec7 \cell 
+\pard\intbl\itap1\pardeftab720\sl400\partightenfactor0
+\cf4 \strokec4   \cf8 \strokec8 extensions\cf3 \strokec3 =\cf9 \strokec9 "html"\cf4 \strokec4 ,\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth2023\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl200 \clpadb20 \clpadr200 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth8814\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl200 \clpadb20 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl400\qr\partightenfactor0
+\cf7 \strokec7 \cell 
+\pard\intbl\itap1\pardeftab720\sl400\partightenfactor0
+\cf4 \strokec4   \cf8 \strokec8 methods\cf3 \strokec3 =\cf9 \strokec9 "GET"\cf4 \strokec4 ,\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth2023\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl200 \clpadb20 \clpadr200 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth8814\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl200 \clpadb20 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl400\qr\partightenfactor0
+\cf7 \strokec7 \cell 
+\pard\intbl\itap1\pardeftab720\sl400\partightenfactor0
+\cf4 \strokec4   \cf8 \strokec8 label\cf3 \strokec3 =\cf9 \strokec9 "Training Servlet Code Snippet"\cf4 \strokec4 ,\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth2023\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl200 \clpadb20 \clpadr200 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth8814\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl200 \clpadb20 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl400\qr\partightenfactor0
+\cf7 \strokec7 \cell 
+\pard\intbl\itap1\pardeftab720\sl400\partightenfactor0
+\cf4 \strokec4   \cf8 \strokec8 description\cf3 \strokec3 =\cf9 \strokec9 "Training Servlet Code Snippet for Medium Blog"\cf4 \strokec4 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth2023\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl200 \clpadb20 \clpadr200 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth8814\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl200 \clpadb20 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl400\qr\partightenfactor0
+\cf7 \strokec7 \cell 
+\pard\intbl\itap1\pardeftab720\sl400\partightenfactor0
+\cf4 \strokec4 )\cell \lastrow\row
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\
+\
+Usage in OSGI:\
+\
+The annotation is defined as a property of a component:\
+\
+@Component( service = Servlet.class)\
+\
+Example\
+\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth1589\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt80 \clpadl200 \clpadb20 \clpadr200 \gaph\cellx4320
+\clmrg \clvertalt \clshdrawnil \clwWidth1589\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt80 \clpadl200 \clpadb20 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl400\partightenfactor0
+
+\f2 \cf3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec3 @Component\cf4 \strokec4 (\cell 
+\pard\intbl\itap1\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth1589\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl200 \clpadb20 \clpadr200 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth10548\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl200 \clpadb20 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl400\qr\partightenfactor0
+\cf7 \strokec7 \cell 
+\pard\intbl\itap1\pardeftab720\sl400\partightenfactor0
+\cf4 \strokec4     \cf8 \strokec8 service\cf4 \strokec4  \cf3 \strokec3 =\cf4 \strokec4  Servlet\cf3 \strokec3 .\cf4 \strokec4 class,\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth1589\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl200 \clpadb20 \clpadr200 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth10548\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl200 \clpadb20 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl400\qr\partightenfactor0
+\cf7 \strokec7 \cell 
+\pard\intbl\itap1\pardeftab720\sl400\partightenfactor0
+\cf4 \strokec4     \cf8 \strokec8 property\cf4 \strokec4  \cf3 \strokec3 =\cf4 \strokec4  \{\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth1589\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl200 \clpadb20 \clpadr200 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth10548\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl200 \clpadb20 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl400\qr\partightenfactor0
+\cf7 \strokec7 \cell 
+\pard\intbl\itap1\pardeftab720\sl400\partightenfactor0
+\cf4 \strokec4         \cf9 \strokec9 "sling.servlet.extensions=html"\cf4 \strokec4 ,\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth1589\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl200 \clpadb20 \clpadr200 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth10548\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl200 \clpadb20 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl400\qr\partightenfactor0
+\cf7 \strokec7 \cell 
+\pard\intbl\itap1\pardeftab720\sl400\partightenfactor0
+\cf4 \strokec4         \cf9 \strokec9 "sling.servlet.selectors=training"\cf4 \strokec4 ,\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth1589\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl200 \clpadb20 \clpadr200 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth10548\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl200 \clpadb20 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl400\qr\partightenfactor0
+\cf7 \strokec7 \cell 
+\pard\intbl\itap1\pardeftab720\sl400\partightenfactor0
+\cf4 \strokec4         \cf9 \strokec9 "sling.servlet.paths=/bin/trainingservlet"\cf4 \strokec4 ,\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth1589\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl200 \clpadb20 \clpadr200 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth10548\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl200 \clpadb20 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl400\qr\partightenfactor0
+\cf7 \strokec7 \cell 
+\pard\intbl\itap1\pardeftab720\sl400\partightenfactor0
+\cf4 \strokec4 	\cf9 \strokec9 "sling.servlet.paths=/bin/trainingservlet2"\cf4 \strokec4 ,\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth1589\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl200 \clpadb20 \clpadr200 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth10548\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl200 \clpadb20 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl400\qr\partightenfactor0
+\cf7 \strokec7 \cell 
+\pard\intbl\itap1\pardeftab720\sl400\partightenfactor0
+\cf4 \strokec4         \cf9 \strokec9 "sling.servlet.methods=get"\cf4 \strokec4 ,\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth1589\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl200 \clpadb20 \clpadr200 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth10548\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl200 \clpadb20 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl400\qr\partightenfactor0
+\cf7 \strokec7 \cell 
+\pard\intbl\itap1\pardeftab720\sl400\partightenfactor0
+\cf4 \strokec4         \cf9 \strokec9 "sling.servlet.resourceTypes=my-aem-project/components/page/page"\cf4 \strokec4 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth1589\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl200 \clpadb20 \clpadr200 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth10548\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl200 \clpadb20 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl400\qr\partightenfactor0
+\cf7 \strokec7 \cell 
+\pard\intbl\itap1\pardeftab720\sl400\partightenfactor0
+\cf4 \strokec4     \}\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trcbpat5 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth1589\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl200 \clpadb20 \clpadr200 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth10548\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadt20 \clpadl200 \clpadb20 \clpadr200 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl400\qr\partightenfactor0
+\cf7 \strokec7 \cell 
+\pard\intbl\itap1\pardeftab720\sl400\partightenfactor0
+\cf4 \strokec4 )\
+\
+OSGI Components\
+\cell \lastrow\row
+\pard\pardeftab720\sl280\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://blog.osoco.de/2015/08/osgi-components-simply-simple-part-i/"}}{\fldrslt 
+\f1\fs36 \cf10 \ul \ulc10 \strokec2 https://blog.osoco.de/2015/08/osgi-components-simply-simple-part-i/}}
+\f1 \cf2 \ul \ulc2 \strokec2 \
+\
+
+\fs28 \cf11 \ulnone Components are handled and managed by Sling as a sling container.\
+\
+@Component\
+\
+@Activate and @Deactivate methods must be protected and void. Enables some actions to be carried out in the specified LifeCycle windows.\
+\
+\
+\pard\pardeftab720\sl308\partightenfactor0
+
+\f3 \cf12 \cb5 \strokec12 import\cf13 \strokec13  \cf11 \strokec11 org.osgi.service.metatype.annotations.AttributeDefinition;\cf13 \strokec13 \
+\cf12 \strokec12 import\cf13 \strokec13  \cf11 \strokec11 org.osgi.service.metatype.annotations.ObjectClassDefinition;\cf13 \strokec13 \
+\'a0\
+\cf14 \strokec14 @ObjectClassDefinition\cf11 \strokec11 (name = \cf15 \strokec15 "Hello World Configuration"\cf11 \strokec11 ,\cf13 \strokec13 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf11 \strokec11 description = \cf15 \strokec15 "The configuration for the hello world component."\cf11 \strokec11 )\cf13 \strokec13 \
+\cf12 \strokec12 public\cf13 \strokec13  \cf16 \strokec16 @interface\cf13 \strokec13  \cf11 \strokec11 MyComponentConfig \{\cf13 \strokec13 \
+\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\cf14 \strokec14 @AttributeDefinition\cf11 \strokec11 (name=\cf15 \strokec15 "Welcome Message"\cf11 \strokec11 , description=\cf15 \strokec15 "This message is displayed on startup of the component."\cf11 \strokec11 )\cf13 \strokec13 \
+\'a0\'a0\'a0\'a0\cf11 \strokec11 String welcome_message() \cf12 \strokec12 default\cf13 \strokec13  \cf15 \strokec15 "Hello World!"\cf11 \strokec11 ;\cf13 \strokec13 \
+\'a0\'a0\
+\'a0\'a0\'a0\'a0\cf14 \strokec14 @AttributeDefinition\cf11 \strokec11 (name=\cf15 \strokec15 "Welcome Message Count"\cf11 \strokec11 , description=\cf15 \strokec15 "This is the number of times, the welcome message will be displayed. "\cf13 \strokec13  \cf11 \strokec11 +\cf13 \strokec13 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf15 \strokec15 "If less than one, no message will be displayed."\cf11 \strokec11 )\cf13 \strokec13 \
+\'a0\'a0\'a0\'a0\cf12 \strokec12 int\cf13 \strokec13  \cf11 \strokec11 welcome_count() \cf12 \strokec12 default\cf13 \strokec13  \cf17 \strokec17 3\cf11 \strokec11 ;\cf13 \strokec13 \
+\'a0\'a0\
+\'a0\'a0\'a0\'a0\cf14 \strokec14 @AttributeDefinition\cf11 \strokec11 (name=\cf15 \strokec15 "Output Goodbye"\cf11 \strokec11 , description=\cf15 \strokec15 "Set this if the component should output a goodbye message."\cf11 \strokec11 )\cf13 \strokec13 \
+\'a0\'a0\'a0\'a0\cf12 \strokec12 boolean\cf13 \strokec13  \cf11 \strokec11 output_goodbye() \cf12 \strokec12 default\cf13 \strokec13  \cf12 \strokec12 true\cf11 \strokec11 ;\cf13 \strokec13 \
+\cf11 \strokec11 \}\cf13 \strokec13 \
+\pard\pardeftab720\sl280\partightenfactor0
+
+\f1 \cf11 \cb1 \strokec2 \
+\
+// The @ObjectClassDefinition() provides annotation for the interface as whole while,\
+\
+// the @AttributeDefinition() provides annotation for each of the attributes of the interface. These are called metatypes and provide human readable configuration information.\
+\
+//To bind the metatype definitions to a component definition an @Designate annotation is required. See below:\
+//
+\f0 \cf18 \cb5 \strokec18 However, we want to bind this configuration to our component which is a different class. Therefore you have to specify the @Designate annotation on your component class:\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalt\clvertalbase \clshdrawnil \clwWidth820\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx4320
+\clvertalt\clvertalbase \clshdrawnil \clwWidth11680\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl308\qr\partightenfactor0
+
+\f3 \cf19 \strokec19 \cell 
+\pard\intbl\itap1\pardeftab720\sl308\partightenfactor0
+\cf12 \strokec12 \
+\
+import\cf13 \strokec13  \cf11 \strokec11 org.osgi.service.metatype.annotations.Designate;\cf13 \strokec13 \
+\'a0\
+\cf14 \strokec14 @Component\cf13 \strokec13 \
+\cf14 \strokec14 @Designate\cf11 \strokec11 ( ocd = MyComponentConfig.\cf12 \strokec12 class\cf13 \strokec13  \cf11 \strokec11 )\cf13 \strokec13 \
+\cf12 \strokec12 public\cf13 \strokec13  \cf12 \strokec12 class\cf13 \strokec13  \cf11 \strokec11 MyFirstComponent \{\cf13 \strokec13 \
+\'a0\'a0\
+\'a0\'a0\'a0\'a0\cf14 \strokec14 @Activate\cf13 \strokec13 \
+\'a0\'a0\'a0\'a0\cf12 \strokec12 protected\cf13 \strokec13  \cf12 \strokec12 void\cf13 \strokec13  \cf11 \strokec11 activate( MyComponentConfig config ) \{\cf13 \strokec13 \'a0\'a0\'a0\cf11 \strokec11 ..\}\
+\
+\
+\
+More on OSGI Annotations\
+\pard\intbl\itap1\pardeftab720\sl1092\partightenfactor0
+
+\f0\fs84 \cf11 Using OSGi R6 annotations (>= AEM6.2)\cb1 \
+\pard\intbl\itap1\pardeftab720\sl420\partightenfactor0
+
+\fs42 \cf11 \cb5 By\'a0{\field{\*\fldinst{HYPERLINK "https://blogs.adobe.com/experiencedelivers/author/feike-visser/"}}{\fldrslt \cf20 \strokec20 Feike Visser}}\'a0on\'a0April 22, 2017\
+\pard\intbl\itap1\pardeftab720\sl560\partightenfactor0
+
+\fs35 \cf11 \cb1 \
+\
+\pard\intbl\itap1\pardeftab720\sl537\sa537\partightenfactor0
+
+\f4\fs33\fsmilli16800 \cf11 \cb5 From AEM6.2 you can use OSGi R6 anno\'adta\'adtions in your project, instead of the good-old Felix ones. You can still use the Felix anno\'adta\'adtions in your project, but I hope after this arti\'adcle you are tempt\'aded to use the OSGi anno\'adta\'adtions.\cb1 \
+\cb5 From AEM6.4 you can use the OSGi R7\'a0anno\'adta\'adtions:\'a0{\field{\*\fldinst{HYPERLINK "http://blogs.adobe.com/experiencedelivers/experience-management/osgi/using-osgi-r7-annotations-aem/"}}{\fldrslt \cf21 \strokec21 http:// blogs .adobe .com/ e x p e r i e n c e d e l i v e r s / e x p e r i e n c e - m a n a g e m e n t / o s g i / u s i n g - o s g i - r 7 - a n n o t a t i o n s - a em/}}\cb1 \
+\cb5 In this arti\'adcle I will describe how to use them, and some advan\'adtages in your code.\cb1 \
+\pard\intbl\itap1\pardeftab720\sl728\sa560\partightenfactor0
+
+\f0\fs56 \cf11 \cb5 Project changes\cb1 \
+\pard\intbl\itap1\pardeftab720\sl537\sa537\partightenfactor0
+
+\f4\fs33\fsmilli16800 \cf11 \cb5 In order to use them, make the fol\'adlow\'ading changes in your pom.xml\cb1 \
+\cb5 Use 3.2.0 or lat\'ader for the maven-bun\'addle-plu\'adg\'adin\cb1 \
+\pard\intbl\itap1\pardeftab720\sl420\partightenfactor0
+
+\f2\fs25\fsmilli12950 \cf22 \cb23 \strokec22 <plugin>\
+  <groupId>org.apache.felix</groupId>\
+  <artifactId>maven-bundle-plugin</artifactId>\
+  <version>3.2.0</version>\
+  <inherited>true</inherited>\
+</plugin>\
+\pard\intbl\itap1\pardeftab720\sl537\sa537\partightenfactor0
+
+\f4\fs33\fsmilli16800 \cf11 \cb5 \strokec11 Add the fol\'adlow\'ading depen\'adden\'adcies\cb1 \
+\pard\intbl\itap1\pardeftab720\sl420\partightenfactor0
+
+\f2\fs25\fsmilli12950 \cf22 \cb23 \strokec22 <dependency>\
+  <groupId>org.osgi</groupId>\
+  <artifactId>org.osgi.service.component.annotations</artifactId>\
+  <version>1.3.0</version>\
+</dependency>\
+\
+<dependency>\
+  <groupId>org.osgi</groupId>\
+  <artifactId>org.osgi.annotation</artifactId>\
+  <version>6.0.0</version>\
+</dependency>\
+\
+<dependency>\
+  <groupId>org.osgi</groupId>\
+  <artifactId>org.osgi.service.metatype.annotations</artifactId>\
+  <version>1.3.0</version>\
+</dependency>\
+\pard\intbl\itap1\pardeftab720\sl728\sa560\partightenfactor0
+
+\f0\fs56 \cf11 \cb5 \strokec11 Changes\cb1 \
+\pard\intbl\itap1\pardeftab720\sl537\sa537\partightenfactor0
+
+\f4\fs33\fsmilli16800 \cf11 \cb5 Once you got the project-set\'adup changed, we can have a look what is changed code\'adwise.\cb1 \
+\cb5 First change is that @Service and @Component are now com\'adbined, via ser\'advice you spec\'adi\'adfy which ser\'advice you are imple\'adment\'ading\cb1 \
+\pard\intbl\itap1\pardeftab720\sl420\partightenfactor0
+
+\f2\fs25\fsmilli12950 \cf22 \cb23 \strokec22 @Component(service = MySimpleService.class)\
+\pard\intbl\itap1\pardeftab720\sl537\sa537\partightenfactor0
+
+\f4\fs33\fsmilli16800 \cf11 \cb5 \strokec11 Still @Reference remains the same\cb1 \
+\pard\intbl\itap1\pardeftab720\sl420\partightenfactor0
+
+\f2\fs25\fsmilli12950 \cf22 \cb23 \strokec22 @Reference\
+private SlingSettingsService settings;\
+\pard\intbl\itap1\pardeftab720\sl537\sa537\partightenfactor0
+
+\f4\fs33\fsmilli16800 \cf11 \cb5 \strokec11 Only thing here is that the imports have changed,\'a0they are now:\cb1 \
+\pard\intbl\itap1\pardeftab720\sl420\partightenfactor0
+
+\f2\fs25\fsmilli12950 \cf22 \cb23 \strokec22 import org.osgi.service.component.annotations.Activate;\
+import org.osgi.service.component.annotations.Component;\
+import org.osgi.service.component.annotations.ConfigurationPolicy;\
+import org.osgi.service.component.annotations.Reference;\
+import org.osgi.service.metatype.annotations.Designate;\
+\pard\intbl\itap1\pardeftab720\sl537\sa537\partightenfactor0
+
+\f4\fs33\fsmilli16800 \cf11 \cb5 \strokec11 For me the biggest change is around @Properties / @Property, defin\'ading OSGi prop\'ader\'adties in your code. You can now spec\'adi\'adfy a prop\'ader inter\'adface which gives you type-safe\'adty for free. To end this, there is no need any\'admore to \'91read\'92 the prop\'ader\'adties in the @Activate-method.\cb1 \
+\cb5 Let me show you this in code:\cb1 \
+\cb5 Spec\'adi\'adfy at class lev\'adel the object-class-def\'adi\'adn\'adi\'adtion\cb1 \
+\pard\intbl\itap1\pardeftab720\sl420\partightenfactor0
+
+\f2\fs25\fsmilli12950 \cf22 \cb23 \strokec22 @Designate(ocd = MyServiceConfiguration.class)\
+\pard\intbl\itap1\pardeftab720\sl537\sa537\partightenfactor0
+
+\f4\fs33\fsmilli16800 \cf11 \cb5 \strokec11 In your acti\'advate-method the inter\'adface is now your argu\'adment, so no need any\'admore to read and con\'advert prop\'ader\'adties.\cb1 \
+\pard\intbl\itap1\pardeftab720\sl420\partightenfactor0
+
+\f2\fs25\fsmilli12950 \cf22 \cb23 \strokec22 private MyServiceConfiguration config;\
+\
+@Activate\
+public void activate(MyServiceConfiguration config) \{\
+  this.config = config;\
+\}\
+\pard\intbl\itap1\pardeftab720\sl537\sa537\partightenfactor0
+
+\f4\fs33\fsmilli16800 \cf11 \cb5 \strokec11 The MySer\'advice\'adCon\'adfig\'adu\'adra\'adtion is an inter\'adface, that defines the prop\'ader\'adties and their types.\cb1 \
+\pard\intbl\itap1\pardeftab720\sl420\partightenfactor0
+
+\f2\fs25\fsmilli12950 \cf22 \cb23 \strokec22 @ObjectClassDefinition(name = "My Service Configuration", description = "Service Configuration")\
+public @interface MyServiceConfiguration \{\
+\
+  @AttributeDefinition(name = "Config Value", description = "Configuration value")\
+  String configValue();\
+\
+  @AttributeDefinition(name = "MultipleValues", description = "Multi Configuration values")\
+  String[] getStringValues();\
+\
+  @AttributeDefinition(name = "NumberValue", description = "Number values", type=AttributeType.INTEGER)\
+  int getNumberValue();\
+\}\
+\pard\intbl\itap1\pardeftab720\sl537\sa537\partightenfactor0
+
+\f4\fs33\fsmilli16800 \cf11 \cb5 \strokec11 This set\'adup will save quite some boil\'ader\'adplate code on read\'ading / con\'advert\'ading prop\'ader\'adties.\cb1 \
+\cb5 The con\'adfig\'adu\'adra\'adtion from above dis\'adplays like this in the con\'adfig\'adM\'adgr:\
+More resources:
+\fs48  \
+{\field{\*\fldinst{HYPERLINK "https://blogs.adobe.com/experiencedelivers/author/feike-visser/page/2/"}}{\fldrslt 
+\f1 \cf2 \cb1 \ul \ulc2 \strokec2 https://blogs.adobe.com/experiencedelivers/author/feike-visser/page/2/}}
+\fs33\fsmilli16800 \cb1 \
+\pard\intbl\itap1\pardeftab720\sl308\partightenfactor0
+
+\f3\fs28 \cf13 \cb5 \strokec13 \cell \lastrow\row
+\pard\pardeftab720\sl280\partightenfactor0
+
+\f1 \cf11 \cb1 \strokec2 \
+\
+\
+ \
+\
+}

@@ -36,6 +36,7 @@ public class OSGIR6SchedulerExample implements Runnable {
 		removeScheduler();
 		schedulerID = config.schedulerName().hashCode(); // update schedulerID
 		addScheduler(config);
+		
 	}
 
 	@Deactivate
